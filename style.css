@@ -48,12 +48,14 @@ padding: 5px;
     background: white;
     float: left;
     clear: both;
+    display: block;
 }
 .right{
 background: #7d7cda;
 color: white;
 float: right;
 clear: both;
+display: block;
 }
 .chat-type-box{
 background: white;
@@ -79,4 +81,9 @@ font-size: 20px;
 .fas{
 font-size: 20px;
 color: #7D7CDA;
+}
+chat-name{
+    font-size: large;
+    font-weight: bold;
+    color: black;
 }
