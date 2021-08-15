@@ -35,7 +35,7 @@ border-bottom-right-radius: 10px;
 }
 .chat-list{
 height: 90%;
-overflow: auto;
+overflow-y: auto;
 }
 .chat{
 margin: 10px;
@@ -64,11 +64,19 @@ align-items: center;
 justify-content: space-evenly;
 }
 #send-chat{
-
+outline: none;
+border: none;
+background: #ebeef2;
+height: 70%;
+width: 80%;
+border-radius: 10px;
+color: lightslategrey;
+font-size: 20px;
 }
 .send{
 
 }
 .fas{
-
+font-size: 20px;
+color: #7D7CDA;
 }
