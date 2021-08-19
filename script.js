@@ -13,12 +13,22 @@ sendchat.addEventListener("click",function(){
     let chat=chatInputMessage.value;
     if(chat){
         let chatDiv=document.createElement("div");
-        chatDiv.classList.add("chat");
+        chatDiv.classList.add("chatInputMessages");
         chatDiv.classList.add("right");
-        chatDiv.innerHTML=chat;
+        let chatName=document.createElement('div');
+        chatName.classList.add("chat-name");
+        chatName.innerHTML="somesh";
+        let chatText=document.createElement('div');
+        chatText.classList.add('chat-text');
+        chatText.innerHTML=chat;
+
+        
+        chatDiv.append(chatName);
+        chatDiv.append(chatText);
         chatList.append(chatDiv);
-        chatInputMessage.value="";
+         
         chatList.scrollTop=chatList.scrollHeight;
+        chatInputMessage.value="";
 
     }
 })
