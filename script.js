@@ -1,34 +1,34 @@
-let sendchat=document.querySelector("#send");
-let chatInputMessage=document.querySelector("#chat");
-let chatList=document.querySelector(".chat-list");
+let chat=document.querySelector("#chat-input");
+let  send=document.querySelector("#send");
+let chatBox=document.querySelector(".chat-box");
 
-chatInputMessage.addEventListener("keyup",function(e){
+chat.addEventListener("keyup",function(e){
     console.log(e.keyCode);
     if(e.keyCode == 13){
-        sendchat.click();
+        send.click();
     }
 })
 
-sendchat.addEventListener("click",function(){
-    let chat=chatInputMessage.value;
-    if(chat){
+send.addEventListener("click",function(){
+    let chatText=chat.value;
+    if(chatText){
         let chatDiv=document.createElement("div");
-        chatDiv.classList.add("chatInputMessages");
+        chatDiv.classList.add("chat");
         chatDiv.classList.add("right");
         let chatName=document.createElement('div');
         chatName.classList.add("chat-name");
         chatName.innerHTML="somesh";
-        let chatText=document.createElement('div');
-        chatText.classList.add('chat-text');
-        chatText.innerHTML=chat;
+        let chatText1=document.createElement('div');
+        chatText1.classList.add('chat-text');
+        chatText1.innerHTML=chatText;
 
         
         chatDiv.append(chatName);
-        chatDiv.append(chatText);
-        chatList.append(chatDiv);
+        chatDiv.append(chatText1);
+        chatBox.append(chatDiv);
          
         chatList.scrollTop=chatList.scrollHeight;
-        chatInputMessage.value="";
+        chat.value="";
 
     }
 })

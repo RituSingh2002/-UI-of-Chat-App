@@ -13,18 +13,29 @@
 }
 .chat-box{
 height: 90%;
+overflow: auto;
+}
+.chat{
+    max-width: 300px;
+    min-width: 100px;
+    clear: both;
+    padding: 6px;
+    border-radius: 10px;
+    margin: 5px;
 }
 .chat-name{
-
+font-weight: bold;
 }
 .chat-text{
 
 }
 .left{
-
+background-color: aqua;
+float: left;
 }
 .right{
-
+background-color: beige;
+float: right;
 }
 .chat-input{
 background: white;
